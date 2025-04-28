@@ -1,44 +1,175 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #FFF5EE;
+  background-color: #F0F8FF;
   color: #333;
-  font-family: 'Arial', sans-serif;
   line-height: 1.6;
 }
 
+.alfa-slab-one-regular {
+  font-family: "Alfa Slab One", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.navigation-bar {
+  display: flex;
+  justify-content: space-between; /* space between Home and the rest */
+  background-color: #FFFFF0;
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  align-items: center; /* vertical center */
+}
+
+#home-button {
+  color: #333;
+  text-decoration: none;
+  padding: 14px 20px;
+  font-size: 18px;
+  transition: ease-in-out 0.3s;
+}
+
+.nav-links a {
+  color: #333;
+  text-decoration: none;
+  padding: 14px 20px;
+  font-size: 18px;
+  transition: ease-in-out 0.3s;
+}
+
+#home-button:hover,
+.nav-links a:hover {
+  color: #F59842;
+}
+
+
 .content-wrapper {
-    width: 1000px;
-    height: 500px;
-    box-shadow: 4px 4px 30px rgba(0,0,0,0.2);
-    border-radius: 12px;
-    background: #222522;
-    overflow: hidden;
-    margin-left: 150px;
-    margin-top: 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 50px; 
+  width: 80%;
+  max-width: 1000px;
+  height: 500px;
+  box-shadow: 1px 1px 8px grey;
+  border-radius: 12px;
+  background: #f59842;
+  overflow: hidden;
+  margin: 25px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
 }
 
-
-span.lower-text{
-  font-weight: bold;
-}
-
-p{
- color: white;
+p {
+  color: black;
 }
 
 .text-wrapper-1 {
-    font-size: 20pt;
-    text-align: left;
+  font-size: 20pt;
+  text-align: left;
 }
 
 img {
-    width: 400px;
-    height: 400px;
-    object-fit: cover; 
+  width: 80%;
+  max-width: 400px; 
+  height: auto; 
+  object-fit: cover;
 }
+
+.content-wrapper-2 {
+  margin-left: 10px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.about-title {
+  text-align: center;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.about-title h2 {
+  font-size: 30px;
+  color: #333;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.about-title::after {
+  content: '';
+  display: block;
+  height: 5px;
+  width: 3rem;
+  background: #f59842;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+
+.skills {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* space between buttons */
+  flex-wrap: wrap;
+}
+
+.skill-card {
+  position: relative;
+  width: 150px; /* Set width for each card */
+  height: 160px; /* Set height */
+  background-color: #f4f4f4;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden; /* Hide overflow content */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card button {
+  width: 100%;
+  height: 100%;
+  background-color: #2c3e50;
+  color: #fff;
+  font-size: 18px;
+  text-align: center;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 20px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.skill-card button:focus {
+  background-color: #34495e;
+}
+
+.skill-card .info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #3498db;
+  color: #fff;
+  padding: 20px;
+  font-size: 14px;
+  display: none; /* Initially hidden */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: scale(1.1); /* Scale up on hover */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Shadow effect */
+}
+
+.skill-card:hover .info {
+  display: block; /* Show the hidden info */
+  opacity: 1; /* Fade in the info */
+}
+
+
+
+
 
